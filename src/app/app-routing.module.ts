@@ -6,11 +6,12 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 import { PrivateTasksComponent } from "./components/private-tasks/private-tasks.component";
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tasks',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SigninComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 

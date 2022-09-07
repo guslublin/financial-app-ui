@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { PrivateTasksComponent } from './components/private-tasks/private-tasks.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PrivateTasksComponent } from './components/private-tasks/private-tasks.
     SignupComponent,
     SigninComponent,
     TasksComponent,
-    PrivateTasksComponent
+    PrivateTasksComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
