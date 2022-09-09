@@ -8,6 +8,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { AuthGuard } from "./auth.guard";
+
 const routes: Routes = [
   {
     path: '',
@@ -20,7 +22,9 @@ const routes: Routes = [
   },
   {
     path: 'private',
-    component: PrivateTasksComponent
+    component: PrivateTasksComponent,
+    canActivate: [AuthGuard]
+    
   },
   {
     path: 'signup',

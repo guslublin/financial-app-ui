@@ -1,1 +1,22 @@
-<p>signin works!</p>
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Sign In
+            </div>
+            <div class="card-body">
+                <form (submit)="signIn()">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" [(ngModel)]="user.email" id="email" placeholder="Email" name="email" required autofocus>                                      
+                    <br>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" [(ngModel)]="user.password" id="password" placeholder="Password" name="password" required autofocus>                                      
+                    <hr>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary" type="submit">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
