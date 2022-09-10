@@ -12,12 +12,19 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" routerLink="/private" routerLinkActive="active">Private</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" routerLink="/signin" routerLinkActive="active">Sign in</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" routerLink="/signup" routerLinkActive="active">Sign up</a>
-        </li>
+        <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/signin" routerLinkActive="active">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/signup" routerLinkActive="active">Sign up</a>
+          </li>
+        </ng-container>
+        <ng-template #loggedIn>
+          <li class="nav-item" #loggedIn>
+            <a class="nav-link" aria-current="page" style="cursor: pointer;" routerLinkActive="active" (click)="authService.logout()">Logout</a>
+          </li>
+        </ng-template>
       </ul>
     </div>
   </div>

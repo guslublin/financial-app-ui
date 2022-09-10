@@ -1,1 +1,6 @@
-<p>private-tasks works!</p>
+<h1>Private Tasks</h1>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of Object.keys(tasks); index as i;">
+        {{tasks[i]['_id']}} - {{tasks[i]['name']}} - {{tasks[i]['description']}}
+    </li>
+</ul>
